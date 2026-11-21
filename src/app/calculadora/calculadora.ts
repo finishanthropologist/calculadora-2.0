@@ -7,4 +7,10 @@ import { Formulario } from './formulario/formulario';
   styleUrl: './calculadora.css',
   templateUrl: './calculadora.html',
 })
-export class Calculadora {}
+export class Calculadora {
+  resultadoCalculado: number | null = null;
+
+  recibirNotificacion(resultado: number) {
+    this.resultadoCalculado = resultado;
+  }
+}
